@@ -264,7 +264,7 @@ public class GameManager {
 		System.out.println("----------------------------------------------------------------------------------------");
 		System.out.println("\t\t\t\tWelcome " + currentSession.getUsername() + " !");
 		System.out.println("Press numbers 1,2 or 3\n\n\t\t\t\t1 Quick fight"
-				+ "\n\t\t\t\t2 Resume Arena\n\t\t\t\t3 My Characters");
+				+ "\n\t\t\t\t2 Resume Arena\n\t\t\t\t3 My Characters\n\t\t\t\t4 Delete my Session");
 		Scanner sc = new Scanner(System.in);
 		int entry = sc.nextInt();
 		
