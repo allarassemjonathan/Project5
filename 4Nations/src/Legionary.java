@@ -23,7 +23,7 @@ public class Legionary extends GameCharacter {
 	private final static Attack[] ATTACKS = {ATTACK1, ATTACK2};
 
 
-	public Legionary(char affinity, String name, int attack, int vitality, int speed, Attack[] Attacks) {
+	public Legionary() {
 		super(NATURAL_AFFINITY, "Roman Legionary", BASE_ATTACK, BASE_VITALITY, BASE_SPEED, ATTACKS);
 		
 	}

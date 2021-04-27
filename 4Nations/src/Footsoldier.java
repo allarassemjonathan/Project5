@@ -23,7 +23,7 @@ public class Footsoldier extends GameCharacter {
 	private final static Attack[] ATTACKS = {ATTACK1, ATTACK2};
 
 
-	public Footsoldier (char affinity, String name, int attack, int vitality, int speed, Attack[] Attacks) {
+	public Footsoldier () {
 		super(NATURAL_AFFINITY, "Egyptian Footsoldier", BASE_ATTACK, BASE_VITALITY, BASE_SPEED, ATTACKS);
 		
 	}

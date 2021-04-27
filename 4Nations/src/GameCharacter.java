@@ -69,7 +69,7 @@ public class GameCharacter {
 		return maxVitality;
 	}
 	public void setMaxVitality(int vitality) {
-		this.maxVitality = maxVitality;
+		this.maxVitality = vitality;
 	}
 	public int getSpeed() {
 		return speed;
@@ -96,8 +96,20 @@ public class GameCharacter {
 	 * @return number of damage to be dealt; negative values are self-restoring rather than damaging
 	 */
 	public int useAttack(int attackNum) {
-		return Attacks[attackNum].findAttackDamage();
+		int force = getAttacks()[attackNum].findAttackDamage();
+		return ((force > 0) ? getAttack() + force : getAttack() - force);
 	}
+	
+	public void useAttack(int attackNum, GameCharacter o) {
+		int force = getAttacks()[attackNum].findAttackDamage();
+		if (force > 0) {
+			o.takeDamage(force + getAttack());
+		}
+		else {
+			this.takeDamage(force - getAttack());
+		}
+	}
+	
 	/** Simulates taking damage by reducing vitality by set amount.
 	 * @param numDamage - the amount of damage to be taken
 	 */
@@ -105,8 +117,11 @@ public class GameCharacter {
 		if(numDamage > currentVitality) {
 			setCurVitality(0);
 		}
+		else if(numDamage < 0 && Math.abs(numDamage) > (maxVitality - currentVitality)){
+			setCurVitality(maxVitality);
+		}
 		else {
-		setCurVitality(getCurVitality() - numDamage);
+			setCurVitality(getCurVitality() - numDamage);
 		}
 	}
 	public String getAttackInfo(int attackNum) {

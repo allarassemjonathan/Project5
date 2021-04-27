@@ -170,13 +170,13 @@ public class Session {
 	 */
 	public void updateMapArena(int numWins) {
 		
-//		for(int i = 0; i < this.mapArena[0].length - 1; i++) {
-//			for(int j = i; j < this.mapArena.length - 1;j++) {
-//				this.mapArena[i][j] = 3;
-//			}
-//		}
-//		
-//		this.mapArena[numWins%SIZE][numWins/SIZE] = 1;
+		for(int i = 0; i < this.mapArena[0].length - 1; i++) {
+			for(int j = i; j < this.mapArena.length - 1;j++) {
+				this.mapArena[i][j] = 3;
+			}
+		}
+		
+		this.mapArena[numWins%SIZE][numWins/SIZE] = 1;
 	}
 }
 

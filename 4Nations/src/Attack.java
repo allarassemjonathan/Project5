@@ -31,7 +31,7 @@ public class Attack {
 		}
 		
 		if(isHealing) {
-			return -damage;
+			return (-damage);
 		}
 
 		return damage;

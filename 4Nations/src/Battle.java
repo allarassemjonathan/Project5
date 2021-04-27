@@ -5,7 +5,7 @@
  *
  */
 import java.util.*;
-//test
+
 public class Battle {
 	private boolean turn;
 	private boolean loop;

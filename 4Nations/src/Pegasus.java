@@ -36,7 +36,7 @@ public class Pegasus extends GameCharacter {
 	private final static Attack[] ATTACKS = {ATTACK1, ATTACK2, ATTACK3, ATTACK4};
 
 
-	public Pegasus(char affinity, String name, int attack, int vitality, int speed, Attack[] Attacks) {
+	public Pegasus() {
 		super(NATURAL_AFFINITY, "Pegasus", BASE_ATTACK, BASE_VITALITY, BASE_SPEED, ATTACKS);
 		
 	}
