@@ -1,0 +1,3 @@
+username : Lory
+password : Moakar
+numWins : 0
